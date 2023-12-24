@@ -22,6 +22,7 @@ module.exports = {
       timeoutBlocks: 200,
       skipDryRun: true,
     },
+	/*
     bsc: {
       provider: () =>
         new HDWalletProvider(mnemonic, `https://bsc-dataseed1.binance.org`),
@@ -30,6 +31,7 @@ module.exports = {
       timeoutBlocks: 200,
       skipDryRun: true,
     },
+	*/
   },
   compilers: {
     solc: {

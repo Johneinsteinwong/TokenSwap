@@ -25,10 +25,11 @@ const getWeb3 = () =>
       }
       // Fallback to localhost; use dev console port by default...
       else {
+        /*
         const provider = new Web3.providers.HttpProvider(
-          "http://127.0.0.1:8545"
-        );
-        const web3 = new Web3(provider);
+          "http://127.0.0.1:7545"
+        );*/
+        const web3 = new Web3("http://127.0.0.1:7545");
         console.log("No web3 instance injected, using Local web3.");
         resolve(web3);
       }

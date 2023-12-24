@@ -27,7 +27,7 @@ function App() {
         const metaMaskAccounts = await web3.eth.getAccounts();
         // Get the contract instance.
         const networkId = await web3.eth.net.getId();
-
+        console.log(networkId);
         const deployedNetworkTokenSwap = TokenSwap.networks[networkId];
         const deployedNetworkTokenABC = TokenABC.networks[networkId];
         const deployedNetworkTokenXYZ = TokenXYZ.networks[networkId];
@@ -75,7 +75,7 @@ function App() {
         window.location.reload();
       });
     };
-    if (web3 && accounts) {
+    if (web3 && accounts && window) {
       load();
     }
   }, [web3, contracts, accounts]);
@@ -95,7 +95,7 @@ function App() {
   }
 
   if (web3 && accounts && contracts) {
-    if (accounts[0] === "0x3dda3A06312D4115F7ccc55a6238f1c0B4eB0e98") {
+    if (accounts[0] === "0x4A42fD5Ca614C723F904DC199e8c93B3DD380FfF") {
       return (
         <React.Fragment>
           <ParticlesConf />
